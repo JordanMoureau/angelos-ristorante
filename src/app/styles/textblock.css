@@ -1,0 +1,108 @@
+.block-container {
+  display: flex;
+  justify-content: center;
+}
+
+.text-block {
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  padding: 3rem 1rem;
+  img {
+    width: 100%;
+    border-width: 8px;
+    border-style: solid;
+    border-radius: 50%;
+    object-fit: cover;
+    max-height: 500px;
+  }
+
+  h2 {
+    font-family: var(--hornsea-bold);
+    font-size: 5rem;
+    line-height: 1;
+    color: var(--color-green);
+  }
+  h3 {
+    font-family: var(--hornsea);
+    color: var(--color-red);
+    font-size: 2rem;
+    line-height: none;
+  }
+
+  h4 {
+    font-family: var(--hornsea);
+    color: var(--color-deep-red);
+    font-size: 2rem;
+    line-height: none;
+  }
+
+  .row {
+    flex-direction: row;
+  }
+
+  .row-reverse {
+    flex-direction: row-reverse !important;
+  }
+
+  .text-block-content {
+    max-width: 450px;
+  }
+
+  p {
+    margin: 1rem 0rem;
+    line-height: 1.2;
+  }
+
+  .text-block-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .btn-primary {
+    border: 1px solid var(--color-green);
+    padding: 0.3rem 1.2rem;
+    color: var(--color-green);
+  }
+
+  .btn-secondary {
+    padding: 0.3rem 1.2rem;
+    background-color: var(--color-red);
+    border: 1px solid var(--color-red);
+    color: var(--color-cream);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-green);
+    color: var(--color-cream);
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-cream);
+    border-color: var(--color-red);
+    color: var(--color-red);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .text-block {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .text-block-image {
+    img {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .text-block {
+    gap: 0;
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,136 @@
+/* Main Navigation Styles */
+
+.topper {
+  background-color: var(--color-red);
+  margin: 0 auto;
+  font-size: 1.1rem;
+  padding: 7px 10px;
+  color: var(--color-cream);
+  text-align: center;
+}
+
+.main-nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.logo {
+  color: var(--color-red);
+  font-size: 3rem;
+}
+
+.main-nav {
+  font-family: "Hornsea";
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6rem;
+  font-size: 1.3rem;
+  font-weight: 200;
+  color: var(--color-red);
+}
+
+.main-nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.main-nav-tel {
+  color: var(--color-green);
+  font-family: "Hornsea";
+  font-size: 2rem;
+}
+
+/*MOBILE NAV STYLES*/
+
+.hamburger {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #9e2a1f; /* your red */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+/* ACTIVE STATE (turn into X) */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.mobile-nav {
+  display: none;
+  justify-content: space-between;
+  padding: 5px 20px;
+  align-items: center;
+  font-family: "hornsea";
+  font-size: 3.5rem;
+}
+
+.mobile-nav-box {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: var(--color-red);
+  z-index: 1000;
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: space-between;
+  }
+
+  .mobile-nav-phone {
+    color: var(--color-green);
+    padding: 2rem;
+  }
+
+  .chef-night-mobile {
+    background-color: var(--color-red);
+    color: white;
+    padding: 2rem;
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-nav-bar {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .logo {
+    font-size: 2.3rem;
+  }
+}

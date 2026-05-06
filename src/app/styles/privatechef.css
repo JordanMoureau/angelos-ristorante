@@ -1,0 +1,88 @@
+.private-chef-box {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 2rem;
+  align-items: stretch;
+  max-width: 1200px;
+
+  .menus-for {
+    background-color: var(--color-green);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-cream);
+    max-width: 400px;
+
+    h2 {
+      text-align: center;
+      font-family: var(--hornsea-bold);
+      font-size: clamp(2rem, 7cqw, 3.5rem);
+    }
+  }
+
+  .private-chef-sidebar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex: 1; /* add this */
+    align-self: stretch;
+
+    .cost {
+      background-color: var(--color-red);
+      padding: 1rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      color: var(--color-cream);
+      flex: 1; /* add this to both */
+      width: 100%; /* add this */
+    }
+
+    .eight-or-more {
+      background-color: var(--color-deep-red);
+      padding: 1rem;
+      flex: 1; /* add this to both */
+      width: 100%; /* add this */
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      color: var(--color-cream);
+    }
+
+    .number {
+      font-size: clamp(2rem, 9cqw, 5rem);
+      font-family: var(--hornsea-bold);
+      width: fit-content;
+      white-space: nowrap; /* add this */
+      flex-shrink: 0;
+    }
+
+    .text {
+      h2 {
+        font-family: var(--hornsea-bold);
+        font-size: clamp(2rem, 6cqw, 3rem);
+      }
+
+      p {
+        font-family: var(--monserrat);
+        max-width: 500px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .private-chef-box {
+    flex-direction: column;
+    .menus-for {
+      max-width: none;
+    }
+  }
+}

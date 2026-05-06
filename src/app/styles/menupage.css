@@ -1,0 +1,146 @@
+.menu-hero {
+  margin: 0.5rem 2rem 2rem 2rem;
+  position: relative;
+  padding: 9rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: clamp(9rem, 15cqw, 15cqw);
+    color: var(--color-red);
+  }
+
+  .the {
+    color: var(--color-deep-red);
+    font-size: clamp(4.2rem, 9cqw, 9cqw);
+  }
+}
+
+.menu-hero::before {
+  content: "";
+  background-image: url("/flatlay.jpg");
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 65%;
+  opacity: 0.5;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.menu-links {
+  font-family: var(--hornsea-bold);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem;
+  color: var(--color-red);
+  font-size: 7cqw;
+
+  .links {
+    border-bottom: 10px solid var(--color-red);
+  }
+
+  .links:hover {
+    font-size: 10cqw;
+    transition: 1s;
+  }
+}
+
+.menu-section h2 {
+  background: var(--color-green);
+  color: var(--color-cream);
+  padding: 1rem;
+  margin: 0;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: clamp(3.5rem, 8cqw, 5rem);
+  font-family: var(--hornsea);
+}
+
+.menu-section-content {
+  background-color: var(--color-green);
+  color: var(--color-cream);
+  position: relative;
+  padding: 5rem 2rem;
+  overflow: hidden;
+}
+
+/* faded image layer */
+.menu-section-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 65%;
+  opacity: 0.7;
+  z-index: 0;
+  pointer-events: none;
+  background-attachment: fixed;
+}
+
+/* each section background */
+#appetizers .menu-section-content::before {
+  background-image: url("/bruchetta.jpg");
+}
+
+#entrees .menu-section-content::before {
+  background-image: url("/clams.jpg");
+}
+
+#desserts .menu-section-content::before {
+  background-image: url("/brulee.jpg");
+}
+
+#desserts {
+  border-bottom: 50px solid var(--color-green);
+}
+
+/* keep menu items above overlay */
+.menu-item {
+  max-width: 860px;
+  position: relative;
+  z-index: 1;
+  padding: 1rem 0;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.item-header h3 {
+  margin: 0;
+  font-size: clamp(3rem, 4cqw, 5cqw);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--hornsea);
+}
+
+.item-price {
+  margin: 0;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.item-content {
+  margin: 0;
+  line-height: 1.7;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 650px) {
+  .menu-hero {
+    margin: 0.5rem 2rem 2rem 2rem;
+    position: relative;
+    padding: 1rem;
+    height: 65vh;
+  }
+}

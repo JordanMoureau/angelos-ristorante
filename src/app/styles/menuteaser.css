@@ -1,0 +1,99 @@
+.menu-slider {
+  background-color: var(--color-red);
+  font-family: "Hornsea";
+  color: var(--color-red);
+  padding: 1rem 1rem 0 1rem;
+  overflow: hidden;
+
+  .menu-slider-track {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .menu-slide {
+    position: relative;
+    aspect-ratio: 1.6 / 1;
+    background-position: 30% 60%;
+    background-size: cover;
+    transition: 3s;
+    font-size: 3.5rem;
+    text-align: center;
+    align-items: start;
+    justify-content: center;
+    display: flex;
+  }
+}
+
+.menu-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(175, 47, 27, 0.15);
+  z-index: 1;
+}
+
+.menu-slide h3 {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 2;
+  font-size: 10cqw;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.menu-slider-footer {
+  color: var(--color-cream);
+  padding: 1rem 0;
+}
+
+.menu-slider-footer a {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+
+  font-family: "HornseaBold";
+  font-size: 3rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* the long line */
+.menu-line {
+  flex: 1;
+  height: 2px;
+  background: currentColor;
+  position: relative;
+}
+
+/* arrow head */
+.menu-line::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+
+  width: 12px;
+  height: 12px;
+
+  border-top: 3px solid currentColor;
+  border-right: 3px solid currentColor;
+
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.menu-slider-footer a:hover .menu-line {
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  transform: scaleX(1.05);
+}
+
+@media screen and (max-width: 500px) {
+  .menu-slide {
+    aspect-ratio: 1.3 / 1;
+  }
+
+  .menu-slide h3 {
+    padding: 0.5rem;
+  }
+}

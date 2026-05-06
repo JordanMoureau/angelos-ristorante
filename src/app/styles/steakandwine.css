@@ -1,0 +1,178 @@
+.steaks-wine-widge {
+  background-color: var(--color-deep-red);
+}
+
+.steaks {
+  background-color: var(--color-deep-red);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 5rem;
+  padding: 3rem 1rem;
+
+  .text-block-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding: 3rem 1rem;
+
+    h2 {
+      font-family: var(--hornsea-bold);
+      font-size: 5rem;
+      line-height: 1;
+      color: var(--color-cream);
+    }
+    h3 {
+      font-family: var(--hornsea);
+      color: var(--color-cream);
+      font-size: 2rem;
+      line-height: none;
+    }
+
+    h4 {
+      font-family: var(--hornsea);
+      color: var(--color-cream);
+      font-size: 2rem;
+      line-height: none;
+    }
+
+    p {
+      margin: 1rem 0rem;
+      line-height: 1.2;
+      color: var(--color-cream);
+    }
+
+    .text-block-actions {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .btn-primary {
+      border: 1px solid var(--color-cream);
+      padding: 0.3rem 1.2rem;
+      color: var(--color-cream);
+    }
+
+    .btn-secondary {
+      padding: 0.3rem 1.2rem;
+      background-color: var(--color-red);
+      border: 1px solid var(--color-red);
+      color: var(--color-cream);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-red);
+      color: var(--color-cream);
+    }
+    .btn-secondary:hover {
+      background-color: var(--color-cream);
+      border-color: var(--color-red);
+      color: var(--color-red);
+    }
+  }
+}
+
+.steaks::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  background-image: url("/steakandpasta.jpg");
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.wines {
+  background-color: var(--color-deep-red);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  position: relative;
+
+  img {
+    position: relative;
+    width: 35%;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: -50px;
+    margin-bottom: -50px;
+    z-index: 10;
+  }
+
+  .text-block-content {
+    position: relative;
+    z-index: 2;
+    max-width: 450px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding: 3rem 1rem;
+
+    h2 {
+      font-family: var(--hornsea-bold);
+      font-size: 5rem;
+      line-height: 1;
+      color: var(--color-cream);
+    }
+    h3 {
+      font-family: var(--hornsea);
+      color: var(--color-cream);
+      font-size: 2rem;
+      line-height: none;
+    }
+
+    h4 {
+      font-family: var(--hornsea);
+      color: var(--color-cream);
+      font-size: 2rem;
+      line-height: none;
+    }
+
+    p {
+      margin: 1rem 0rem;
+      line-height: 1.2;
+      color: var(--color-cream);
+    }
+  }
+
+  .text-block-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .btn-primary {
+    border: 1px solid var(--color-red);
+    padding: 0.3rem 1.2rem;
+    color: var(--color-red);
+  }
+
+  .btn-secondary {
+    padding: 0.3rem 1.2rem;
+    background-color: var(--color-red);
+    border: 1px solid var(--color-red);
+    color: var(--color-cream);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-red);
+    color: var(--color-cream);
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-cream);
+    border-color: var(--color-red);
+    color: var(--color-red);
+  }
+}

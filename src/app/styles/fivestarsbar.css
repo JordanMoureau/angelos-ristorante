@@ -1,0 +1,23 @@
+.five-stars-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 3rem;
+  font-family: var(--hornsea-bold);
+  text-align: center;
+
+  .stars {
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .five-stars-bar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

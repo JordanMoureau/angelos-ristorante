@@ -1,0 +1,15 @@
+#appetizers-catering .menu-section-content::before {
+  background-image: url("/crabcakes.jpg");
+}
+
+#entrees-catering .menu-section-content::before {
+  background-image: url("/hero.jpeg");
+}
+
+#desserts-catering .menu-section-content::before {
+  background-image: url("/tiramisu.jpg");
+}
+
+#desserts-catering {
+  border-bottom: 50px solid var(--color-green);
+}

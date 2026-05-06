@@ -1,0 +1,76 @@
+.catering-block {
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: var(--color-cream);
+  font-family: "HornseaBold";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+  padding: 9rem 1rem;
+}
+
+.catering-block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 28, 27, 0.35);
+  z-index: 1;
+}
+
+.catering-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  max-width: 600px;
+
+  h2 {
+    font-size: clamp(5rem, 8cqw, 6rem);
+    line-height: 1;
+    font-family: "HornseaBold";
+    line-height: 1;
+  }
+
+  p {
+    line-height: 1.3;
+  }
+
+  .catering-button {
+    margin-top: 2rem;
+  }
+
+  a {
+    font-family: var(--monserrat);
+    border: 1px solid var(--color-cream);
+    padding: 0.5rem 1.4rem;
+  }
+
+  a:hover {
+    background-color: rgba(245, 241, 235, 0.3);
+    transform: 2s;
+    border: 1px solid var(--color-cream);
+  }
+}
+
+.catering-bottom-bar {
+  background-color: var(--color-deep-red);
+  color: var(--color-cream);
+  font-family: "HornseaBold";
+  font-size: 5cqw;
+  line-height: 1;
+  white-space: nowrap;
+  padding: 0.5rem 0rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .catering-block {
+    padding: 3rem 1rem;
+  }
+}

@@ -1,0 +1,18 @@
+.reserve-page {
+  padding: 15rem 1rem;
+  .catering-inner {
+    max-width: 500px;
+
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    h2 {
+      font-size: clamp(6rem, 9cqw, 6rem);
+    }
+
+    h1 {
+      font-size: clamp(6rem, 9cqw, 6rem);
+    }
+  }
+}

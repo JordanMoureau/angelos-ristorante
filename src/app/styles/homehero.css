@@ -1,0 +1,116 @@
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  margin: 0.5rem 2rem;
+  padding: 9rem 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    margin: 0 auto;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: clamp(3rem, 15cqw, 10rem);
+    gap: 1rem;
+    line-height: 0.8;
+    font-family: var(--hornsea-bold);
+  }
+}
+
+/* optional dark overlay */
+.home-hero::after {
+  content: "";
+  background-image: url("/hero.jpeg");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
+}
+
+/* keeps content above overlay */
+.home-hero > * {
+  position: relative;
+}
+
+.authentic {
+  color: var(--color-deep-red);
+  margin-left: 3rem;
+  font-size: clamp(1.5rem, 8cqw, 5rem);
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+.organic {
+  color: var(--color-red);
+}
+
+.italian {
+  color: var(--color-green);
+  font-size: clamp(12rem, 17cqw, 15rem);
+}
+
+.dining {
+  font-weight: 100;
+  color: var(--color-charcoal);
+  line-height: 1;
+  font-size: 3.2cqw;
+  max-width: 400px;
+  font-family: "big-caslon-fb", serif;
+}
+
+@media screen and (max-width: 1000px) {
+  .home-hero {
+    padding: 2rem;
+    min-height: 85vh;
+  }
+
+  .authentic {
+    margin-left: 2rem;
+  }
+
+  .dining {
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .home-hero {
+    margin: 0rem;
+
+    h1 {
+      flex-direction: column;
+    }
+  }
+  .authentic {
+    align-items: center;
+    justify-content: center;
+    margin-left: 0rem;
+    font-size: 25cqw;
+  }
+
+  .organic {
+    text-align: center;
+    font-size: 35cqw;
+  }
+
+  .italian {
+    font-size: 35cqw;
+    text-align: center;
+  }
+
+  .dining {
+    text-align: center;
+    font-size: clamp(1rem, 5cqw, 2rem);
+  }
+
+  .home-hero::after {
+    background-position: center;
+  }
+}
