@@ -670,15 +670,15 @@ export default function CateringMenu() {
         </div>
 
         <div className="menu-links">
-          <a href="#appetizers" className="links">
+          <a href="#appetizers-catering" className="links">
             Appetizers
           </a>
 
-          <a href="#entrees" className="links">
+          <a href="#entrees-catering" className="links">
             Entrees
           </a>
 
-          <a href="#desserts" className="links">
+          <a href="#desserts-catering" className="links">
             Desserts
           </a>
         </div>
